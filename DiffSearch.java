@@ -102,9 +102,10 @@ class DiffSearch{
 	int diff_len=6;
 	ArrayList<BigInteger> diff=new ArrayList<BigInteger>();
 	boolean match_sub=false;
-	for(int i=0;i<100;i++){
+	for(int i=57;i<58;i++){
 	    diff=test.get(i);
 	    while(diff.size()>=diff_len){
+		System.out.println(diff);
 		if(all_equal(diff)){
 		    hit++;
 		    break;
@@ -114,6 +115,7 @@ class DiffSearch{
 		    index=match_subseq(diff,alb);
 		    if(index!=-1){
 			match_sub=true;
+			System.out.println("hit: "+alb.get(index));
 			break;
 		    }
 		}
