@@ -295,4 +295,10 @@ class DiffSearch{
 	    return(res);
 	}
     }
+    BigInteger cal_gcd(ArrayList<BigInteger> x){
+        BigInteger res=x.get(0);
+        for(int i=1;i<x.size();i++)
+            res=res.gcd(x.get(i));
+        return(res);
+    }
 }
